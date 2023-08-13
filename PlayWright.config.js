@@ -1,8 +1,12 @@
 // playwright.config.js
-const { devices } = require('@playwright/test');
-
+//const { devices } = require('@playwright/test');
+import { devices } from '@playwright/test';
 /** @type {import('@playwright/test').PlaywrightTestConfig} */
 const config = {
+  testDir: "./",
+  fullyParalel: false,
+  retries: process.env.CI ? 2 : 0,
+  reporter: 'html',
   retries:1,
   use: {
     trace: 'on',
@@ -15,7 +19,7 @@ const config = {
     {
       name: 'firefox',
       use: { ...devices['Desktop Firefox'] },
-      testMatch: '/.*Config*.spec.ts/',
+//      testMatch: '/.*Config*.spec.ts/',
     },
     {
       name: 'edge',
@@ -28,7 +32,7 @@ const config = {
     },
     {
       name: 'Mobile Safari',
-      use: devices['iPhone 12'],
+      use: devices['iPhone 14'],
     },
   ],
 };

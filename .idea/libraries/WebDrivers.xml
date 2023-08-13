@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="WebDrivers">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/Selenium_examples/WebDrivers/chromedriver_win32 (1).zip!/" />
+      <root url="jar://$PROJECT_DIR$/Selenium_examples/WebDrivers/edgedriver_win64 (1).zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
